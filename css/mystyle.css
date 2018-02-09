@@ -1,0 +1,54 @@
+/* mystyle.css*/
+html, body {
+	height: 100%;
+	background: #ffffff;
+}
+
+#mapdiv {
+	height: 100%;
+}
+.switch-list {
+    color: white;  
+	background-color: #ffa12d;
+}
+
+.switch-list:hover {  
+	color:grey;
+	background-color: #ffc072;
+}
+.navbar-brand {
+	background-color: #fafafa;
+	border-color: #fafafa;
+	font-family: 'Merriweather Sans', sans-serif;
+	height: auto;
+}
+.navbar-nav {
+	background-color: #f8f8f8;
+	border-color: #fafafa;
+	font-family: 'Merriweather Sans', sans-serif;
+	position: relative;
+    top: 15px;
+}
+ .navbar-brand img {
+ 	resize: both;
+	width: 100%;
+}
+.navbar-toggle {
+	margin-top: 17px;
+}
+#feedback form {
+	margin: 5%;
+}
+#account form {
+	margin: 5%;
+}
+#about form {
+	margin: 5%;
+}
+#index img[src="img/legend.PNG"] {
+	float: left;
+}
+.mapfont {
+	font-family: 'Merriweather Sans', sans-serif;
+	height: auto;
+}
