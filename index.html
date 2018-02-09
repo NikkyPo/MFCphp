@@ -20,7 +20,8 @@
 		
 	</head>
 	<body id="index">
-		<nav class="navbar navbar-default">
+
+		<nav class="navbar navbar-default navbar-fixed-top">
 		     <div class="navbar-header">
 		        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
 		            <span class="icon-bar"></span>
@@ -33,40 +34,19 @@
 		         <ul class="nav navbar-nav navbar-right">
 		         	<li><a href="index.html">Map</a></li>
 		            <li><a href="about.html">About</a></li>
-		            <li><a href="account.html">Your Account</a></li>
+		            <li><a href="users/account.html">Your Account</a></li>
 		            <li><a href="feedback.html">Feedback</a></li>
 		        </ul>  
 		     </div>
 		</nav>
 
-	<div id="side-panel" class="col-lg-3 col-md-2 col-xs-12">
-		<h4 class="mapfont"> Welcome to the Minnesota Food Charter Map! </h4>
-		<button id="zoomToMn" class="btn switch-list">Zoom Home</button>
-		<a href="https://survey123.arcgis.com/share/22e7b88e53cf4c2a81b93ea308bb792a" class="btn switch-list" target="_blank"><img src="img/addpoint.png" alt="survey123" width="94" height="40"></a>
-		<br>
-		<img id="legend" src="img/legend.PNG">
-    </div>
-
-	<div id="mapdiv" class="col-lg-9 col-md-10 col-xs-12"></div>
-	</div>
+	<div id="mapdiv" class="col-xs-12"></div>
 
 	<script>
-		$("#zoomToMn").click(function(){
-			mymap.setView([46.2, -94.6], 6);
-		});
 		var mymap = L.map("mapdiv")
 		var mapView = mymap.setView([46.2, -94.6], 6); //Leaflet method that sets the view for the map.
 
 		var cartoMap = L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png").addTo(mymap); //Tile layer from open street maps, but uses Leaflet method
-
-		function myFunction() {
-			var x = document.getElementById("myTopnav");
-			if (x.className ===  "topnav") {
-				x.className += " responsive";
-			} else {
-				x.className = "topnav";
-			}
-		}
 
 		var mnCounty = L.esri.featureLayer({
 			url:'https://services.arcgis.com/8df8p0NlLFEShl0r/ArcGIS/rest/services/MN_Counties_NetworkCount/FeatureServer/0',
@@ -84,23 +64,6 @@
 
 	        }).addTo(mymap).bringToFront();
 
-        var survey123 = L.esri.featureLayer({url: 'https://services.arcgis.com/8df8p0NlLFEShl0r/ArcGIS/rest/services/service_06ab2e3e9f484ba3aaecb037631b3367/FeatureServer/0'}).addTo(mymap);
-
-        survey123.bindPopup(function(evt) {
-            return L.Util.template(
-            	'<h4>{project_name}</h4><hr/><div><strong>Location: </strong>{geodescription}<br><br></div><div><strong>About the project:</strong>{description}</div><div><br><strong>Contact Information:</strong><br>Contact: {contact} <br>Email: {email}<br>Organization: {organization}<br>Website: {website}</div><br><div><strong>Connected to Food Network? </strong>{connected} {connectedResult}</div><br><div><strong>Work Focus: </strong>Food {categories}</div><br>', evt.feature.properties);
-        });
-
-		var Legend =  new L.Control.Legend({
-		        position: 'topleft',
-		        collapsed: true,
-		        controlButton: {
-		            title: "Legend"}
-		        });
-		mymap.addControl( Legend );
-		 
-		$(".legend-container").append( $("#legend") );
-		$(".legend-toggle").append( "<h5 class='legend-toggle-icon' style='color: #000'><img height='40px' width='40px' src='img/legendicon.png'></h5>" );
 	</script>
 	</body>
 </html>

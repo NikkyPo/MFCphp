@@ -1,23 +1,11 @@
 /* mystyle.css*/
-html, body {
+html, body, #mapdiv {
 	height: 100%;
-	background: #ffffff;
+	margin-top: 22px;
 }
 
-#mapdiv {
-	height: 100%;
-}
-.switch-list {
-    color: white;  
-	background-color: #ffa12d;
-}
-
-.switch-list:hover {  
-	color:grey;
-	background-color: #ffc072;
-}
 .navbar-brand {
-	background-color: #fafafa;
+	background-color: #f8f8f8;
 	border-color: #fafafa;
 	font-family: 'Merriweather Sans', sans-serif;
 	height: auto;
@@ -27,27 +15,36 @@ html, body {
 	border-color: #fafafa;
 	font-family: 'Merriweather Sans', sans-serif;
 	position: relative;
-    top: 15px;
+    top: 5px;
 }
- .navbar-brand img {
+.navbar-brand img {
  	resize: both;
 	width: 100%;
 }
 .navbar-toggle {
 	margin-top: 17px;
 }
+
 #feedback form {
 	margin: 5%;
+	margin-top: 22px;
+
 }
 #account form {
 	margin: 5%;
+	margin-top: 52px;
+
+
 }
 #about form {
 	margin: 5%;
+	margin-top: 22px;
 }
-#index img[src="img/legend.PNG"] {
-	float: left;
+#profile form {
+	margin: 5%
+	margin-top: 22px;
 }
+
 .mapfont {
 	font-family: 'Merriweather Sans', sans-serif;
 	height: auto;
