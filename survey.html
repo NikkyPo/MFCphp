@@ -43,21 +43,40 @@
 		<h4><p>This survey is intended to gather information that can help individuals and organizations connect with information, resources, and other doing simliar work that advances the Minnesota Food Charter strategies.</p></h4><br>
 		
 		<div class="form-group">
-			<label for="project_name" class="control-label">What is the title of your project?</label><br>
+			<label for="project_name" class="control-label">What is the title of your project?
 				<input class="form-control" type="text" maxlength="100" placeholder="" id="project_name" name="project_name" required>
+			</label>
 		</div>
 
 		<div class="form-group">
-			<label for="geopoint" class="control-label">Where is your project located? <br>
+			<label for="geopoint" class="control-label">Where is your project located? 
 				<input class="form-control" type="text" maxlength="100" placeholder="" id="geopoint" name="geopoint" required>
 			</label>
 		</div>
 
 		<div class="form-group">
-			<label for="geodescription" class="control-label">Geographic description<br>
+			<label for="geodescription" class="control-label">Geographic description
 				<textarea class="form-control" maxlength="300" id="geodescription" name="geodescription" rows="4" required></textarea>
 			</label>
 		</div>
+
+		<div class="form-group">
+			<label for="contact" class="control-label">Please provide the name of the primary contact for the project. 
+				<input class="form-control" type="text" maxlength="100" placeholder="" id="contact" name="contact" required>
+			</label>
+		</div>	
+
+		<div class="form-group">
+			<label for="organization" class="control-label">Organization for primary contact. 
+				<input class="form-control" type="text" maxlength="100" placeholder="" id="organization" name="organization" required>
+			</label>
+		</div>	
+
+		<div class="form-group">
+			<label for="email" class="control-label">Email address for primary contact.
+				<input class="form-control" type="text" maxlength="100" placeholder="" id="email" name="email" required>
+			</label>
+		</div>		
 
 		<div class="form-group">
 			<label for="description" class="control-label">Brief description of the project - what are you trying to accomplish and how are you going about it?<br>
@@ -66,19 +85,19 @@
 		</div>
 
 		<div class="form-group">
-			<label for="learning" class="control-label">What would you like to learn?<br>
+			<label for="learning" class="control-label">What would you like to learn?
 				<textarea class="form-control" maxlength="300" id="learning" name="learning" rows="4"></textarea>
 			</label>
 		</div>
 
 		<div class="form-group">
-			<label for="resources" class="control-label">What resources can you offer to others?<br>
+			<label for="resources" class="control-label">What resources can you offer to others?
 				<textarea class="form-control" maxlength="300" id="resources" name="resources" rows="4"></textarea>
 			</label>
 		</div>
 
 		<div class="form-group">
-			<label for="website" class="control-label">Please list any websites associated with the project.<br>
+			<label for="website" class="control-label">Please list any websites associated with the project.
 				<textarea class="form-control" type="url" maxlength="300" id="website" name="website" rows="4"></textarea>
 			</label>
 		</div>
@@ -88,7 +107,7 @@
 
 	<form class="surveyForm2">
 		<div id="part2">
-		<center><H3>Categories, Subcategories and Strategies</H3></center>
+		<H3>Categories, Subcategories and Strategies</H3>
 		<br>
 		<div class="form-group">
 			<label class="control-label">Is this project connected with a food network? Click <a href="http://www.extension.umn.edu/family/health-and-nutrition/partner-with-us/food-networks/food-networks-in-mn/#map" target="_blank">HERE</a> for a list of food networks in Minnesota</label>
@@ -111,7 +130,7 @@
 
 		<div class="form-group hidden">
 			<label>Which food network is this project associated with?
-				<input type="text" maxlength="100" placeholder="" id="connectedresult" name="connectedresult" required>
+				<input type="text" maxlength="100" placeholder="" id="connectedresult" name="connectedresult">
 			</label>
 		</div>
 
@@ -145,7 +164,7 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href ="http://mnfoodcharter.com/the-charter/food-skills/" target="_blank">Food Skills</a> subcategory associated with the project:</label>
 			<div class="checkbox">
 				<label>
@@ -164,7 +183,7 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href ="http://mnfoodcharter.com/the-charter/food-affordability/" target="_blank"> Food Affordability</a> subcategory associated with the project:</label>
 			<div class="checkbox">
 				<label>
@@ -178,7 +197,7 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href ="http://mnfoodcharter.com/the-charter/food-affordability/" target="_blank"> Food Affordability</a> subcategory associated with the project:
 			</label>
 			<div class="checkbox">
@@ -193,7 +212,7 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href ="http://mnfoodcharter.com/the-charter/food-availability/" target="_blank"> Food Availability</a> subcategory associated with the project:
 			</label>
 			<div class="checkbox">
@@ -213,7 +232,7 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href ="http://mnfoodcharter.com/the-charter/food-infrastructure/" target="_blank">Food Infrastructure</a> subcategory associated with the project:
 			</label>
 			<div class="checkbox">
@@ -258,7 +277,7 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href ="http://mnfoodcharter.com/the-charter/food-skills/" target="_blank">Food Skills</a> - Children, Youth and Young Adults strategy associated with the project:
 			</label>
 			<div class="checkbox">
@@ -323,7 +342,7 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href ="http://mnfoodcharter.com/the-charter/food-skills/" target="_blank">Food Skills</a>  - Adults strategy:
 			</label>
 			<div class="checkbox">
@@ -358,7 +377,7 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href ="http://mnfoodcharter.com/the-charter/food-skills/strategies/" target="_blank"> Food Skills </a> - Food Service Professionals strategy:
 			</label>
 			<div class="checkbox">
@@ -383,7 +402,7 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-affordability/strategies/" target="_blank"> Food Affordability</a> - Buying Food strategy:
 			</label>
 			<div class="checkbox">
@@ -403,7 +422,7 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-affordability/strategies/" target="_blank"> Food Affordability</a> - Selling Food strategy:
 			</label>
 			<div class="checkbox">
@@ -433,7 +452,7 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-availability/strategies/" target="_blank"> Food Availability</a> - Places and Options strategy:
 			</label>
 			<div class="checkbox">
@@ -538,7 +557,7 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-availability/strategies/" target="_blank"> Food Availability</a> - Climate and Environment strategy:
 			</label>
 			<div class="checkbox">
@@ -553,7 +572,7 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-accessibility/strategies/" target="_blank"> Food Accessibility</a> - Transportation strategy:
 			</label>
 			<div class="checkbox">
@@ -598,7 +617,7 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-infrastructure/strategies/" target="_blank"> Food Infrastructure</a> - Agriculture and Food Research, Technologies, and Practices strategy:
 			</label>
 			<div class="checkbox">
@@ -633,7 +652,7 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-infrastructure/strategies/" target="_blank"> Food Infrastructure</a> - Physical and Financial Infrastructure strategy associated with this project:
 			</label>
 			<div class="checkbox">
@@ -663,7 +682,7 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-infrastructure/strategies/" target="_blank"> Food Infrastructure</a> - Local Markets strategy associated with this project:
 			</label>
 			<div class="checkbox">
@@ -678,7 +697,7 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-infrastructure/strategies/" target="_blank"> Food Infrastructure</a> - Farmland Access and Preservation strategy associated with this project:
 			</label>
 			<div class="checkbox">
@@ -693,7 +712,7 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-infrastructure/strategies/" target="_blank"> Food Infrastructure</a> - Farmer Training and Resources strategy associated with this project:
 			</label>
 			<div class="checkbox">
@@ -718,7 +737,7 @@
 			</div>
 		</div>
 
-		<div class="form-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-infrastructure/strategies/" target="_blank"> Food Infrastructure</a> -  Labor and Pay strategy associated with this project:
 			</label>
 			<div class="checkbox">
@@ -753,7 +772,7 @@
 			</div>
 		</div>
 
-		<div class="control-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-infrastructure/strategies/" target="_blank"> Food Infrastructure</a> - Healthy Food and Agriculture  Policy strategy associated with this project:
 			</label>
 			<div class="checkbox">
@@ -778,7 +797,7 @@
 			</div>
 		</div>
 
-		<div class="control-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-infrastructure/strategies/" target="_blank"> Food Infrastructure</a> - Food Labeling, Regulations, and Marketing strategy associated with this project:
 			</label>
 			<div class="checkbox">
@@ -813,7 +832,7 @@
 			</div>
 		</div>
 
-		<div class="control-group">
+		<div class="form-group hidden">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-infrastructure/strategies/" target="_blank"> Food Infrastructure</a> - Influencing and Decision Making strategy associated with this project:
 			</label>
 			<div class="checkbox">
@@ -843,6 +862,22 @@
 
     <hr>
 	<script>
+
+		$(document).ready(function() {
+			var connected = $('#surveyForm2 input:radio[name=connected]');
+
+			var yes = $('#surveyForm2 text[name="connectedresult"]').parent();
+
+			connected.change(function() {
+			var value=this.value;
+			all.addClass('hidden');
+
+			if (value == 'Yes'){
+				yes.removeClass('hidden');
+				
+			});
+
+		});
 
 	</script>
 	</body>
