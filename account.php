@@ -1,7 +1,23 @@
+<?php 
+	$header="Minnesota Food Charter";
+
+	if (isset($_GET['lat'])) {
+		$lat = $_GET['lat'];
+	} else {
+		$lat = "NA";
+	}
+	if (isset($_GET['long'])) {
+		$long = $_GET['long'];
+	} else {
+		$long = "NA";
+	}
+
+?>
+
 <!DOCTYPE html>
 	<html>
 	<head>
-		<title>Minnesota Food Charter</title>
+		<title><?php echo $header; ?></title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		
@@ -36,28 +52,33 @@
 		        </ul>  
 		     </div>
 		</nav>
-    <form class="mapfont">
     	<br>
-    	<div>
+    	<div class="mapfont">
     		<h3><strong>Log In</strong></h3><br>
     		<p>Once logged in you will be able to add and edit data in the Minnesota Food Charter map.</p>
     		<p>Don't have an account? <button class="btn switch-list">Register here</button><br>
     		</p>
     	</div>
-		<div>
-			<label for="username">Username</label>
-			<input id="username" type="text" placeholder=" username" name="username" required><br><br>
-			<label for="passwords">Password</label>
-	        <input pattern=".{5,10}" required title="5 to 10 characters" id="passwords" type="password" placeholder=" password" name="password" required>
-        </div><br>
-        	<button class="btn switch-list">Sign In</button>
-        	        </div>
-        	        <br><br>
+
+
+
+    	<?php
+    		foreach ($_GET as $key=>$val) {
+    			echo 'Key: {$key} Value: {$val}<br>';
+    		}
+    	?> 
+
+    	<form method="POST" action="process.php">
+			Username: <input type="text" placeholder=" username" name="lat" required><br><br>
+	        Password: <input pattern=".{5,10}" required title="5 to 10 characters" type="password" placeholder=" password" name="long" required>
+	        <br><br>
+        	<input type="submit" value="Sign In" class="btn switch-list">
+        </form>
+
         <p>Take a survey to add your project point and information to the map</p>
 
         <button class="btn switch-list "><a href="survey.html" style="color: black; text-decoration: none">Survey</a></button>
 
-    </form>
     <hr>
 	<script>
 

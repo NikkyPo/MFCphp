@@ -28,13 +28,10 @@ html, body, #mapdiv {
 #feedback form {
 	margin: 5%;
 	margin-top: 22px;
-
 }
 #account form {
 	margin: 5%;
 	margin-top: 52px;
-
-
 }
 #about form {
 	margin: 5%;
@@ -48,4 +45,7 @@ html, body, #mapdiv {
 .mapfont {
 	font-family: 'Merriweather Sans', sans-serif;
 	height: auto;
+}
+.btn:hover {
+	background-color: #ffa12d;
 }

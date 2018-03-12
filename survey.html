@@ -17,7 +17,7 @@
 		<script src="https://unpkg.com/esri-leaflet-renderers@2.0.2/dist/esri-leaflet-renderers.js"></script> 
 		
 	</head>
-	<body id="account">
+	<body class="mapfont" id="account">
 		<nav class="navbar navbar-default navbar-fixed-top">
 		     <div class="navbar-header">
 		        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
@@ -40,7 +40,7 @@
 	<form class="surveyForm1">
 		<div id="part1">
 		<br><h3>The Minnesota Food Charter Survey</h3><br>
-		<h4><p>This survey is intended to gather information that can help individuals and organizations connect with information, resources, and other doing simliar work that advances the Minnesota Food Charter strategies.</p></h4><br>
+		<h4><p>This survey is intended to gather information that can help individuals and organizations connect with information, resources, and others doing simliar work that advances the Minnesota Food Charter strategies.</p></h4><br>
 		
 		<div class="form-group">
 			<label for="project_name" class="control-label">What is the title of your project?
@@ -128,7 +128,7 @@
 			</div>
 		</div>
 
-		<div class="form-group hidden">
+		<div id="problem" class="form-group hidden connectedresult">
 			<label>Which food network is this project associated with?
 				<input type="text" maxlength="100" placeholder="" id="connectedresult" name="connectedresult">
 			</label>
@@ -164,7 +164,7 @@
 			</div>
 		</div>
 
-		<div class="form-group hidden">
+		<div class="form-group hidden" id="skills">
 			<label class="control-label">Please choose a <a href ="http://mnfoodcharter.com/the-charter/food-skills/" target="_blank">Food Skills</a> subcategory associated with the project:</label>
 			<div class="checkbox">
 				<label>
@@ -183,7 +183,7 @@
 			</div>
 		</div>
 
-		<div class="form-group hidden">
+		<div class="form-group hidden" id="affordability">
 			<label class="control-label">Please choose a <a href ="http://mnfoodcharter.com/the-charter/food-affordability/" target="_blank"> Food Affordability</a> subcategory associated with the project:</label>
 			<div class="checkbox">
 				<label>
@@ -197,42 +197,22 @@
 			</div>
 		</div>
 
-		<div class="form-group hidden">
-			<label class="control-label">Please choose a <a href ="http://mnfoodcharter.com/the-charter/food-affordability/" target="_blank"> Food Affordability</a> subcategory associated with the project:
-			</label>
-			<div class="checkbox">
-				<label> 
-					<input type="checkbox" name="affordabilitysubcategory" value="places">Places and Options
-				</label>
-			</div>
-			<div class="checkbox">
-				<label>
-					<input type="checkbox" name="affordabilitysubcategory" value="climate"/>Climate and Environment
-				</label>
-			</div>
-		</div>
-
-		<div class="form-group hidden">
+		<div class="form-group hidden" id="availability">
 			<label class="control-label">Please choose a <a href ="http://mnfoodcharter.com/the-charter/food-availability/" target="_blank"> Food Availability</a> subcategory associated with the project:
 			</label>
 			<div class="checkbox">
-				<label>
-					<input type="checkbox" name="skillssubcategory" value="children">Children, Youth and Young Adults
+				<label> 
+					<input type="checkbox" name="availabilitysubcategory" value="places">Places and Options
 				</label>
 			</div>
 			<div class="checkbox">
 				<label>
-					<input type="checkbox" name="skillssubcategory" value="adults">Adults
-				</label>
-			</div>
-			<div class="checkbox">
-				<label>
-					<input type="checkbox" name="skillssubcategory" value="professionals"/>Food Service Professionals
+					<input type="checkbox" name="availabilitysubcategory" value="climate">Climate and Environment
 				</label>
 			</div>
 		</div>
 
-		<div class="form-group hidden">
+		<div class="form-group hidden" id="infrastructure">
 			<label class="control-label">Please choose a <a href ="http://mnfoodcharter.com/the-charter/food-infrastructure/" target="_blank">Food Infrastructure</a> subcategory associated with the project:
 			</label>
 			<div class="checkbox">
@@ -257,6 +237,11 @@
 			</div>
 			<div class="checkbox">
 				<label>
+					<input type="checkbox" name="infrastructuresubcategory" value="farmer">Farmer Training and Resources
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
 					<input type="checkbox" name="infrastructuresubcategory" value="labor">Labor and Pay
 				</label>
 			</div>
@@ -277,7 +262,7 @@
 			</div>
 		</div>
 
-		<div class="form-group hidden">
+		<div class="form-group hidden" id="children">
 			<label class="control-label">Please choose a <a href ="http://mnfoodcharter.com/the-charter/food-skills/" target="_blank">Food Skills</a> - Children, Youth and Young Adults strategy associated with the project:
 			</label>
 			<div class="checkbox">
@@ -342,7 +327,7 @@
 			</div>
 		</div>
 
-		<div class="form-group hidden">
+		<div class="form-group hidden" id="adults">
 			<label class="control-label">Please choose a <a href ="http://mnfoodcharter.com/the-charter/food-skills/" target="_blank">Food Skills</a>  - Adults strategy:
 			</label>
 			<div class="checkbox">
@@ -377,7 +362,7 @@
 			</div>
 		</div>
 
-		<div class="form-group hidden">
+		<div class="form-group hidden" id="professionals">
 			<label class="control-label">Please choose a <a href ="http://mnfoodcharter.com/the-charter/food-skills/strategies/" target="_blank"> Food Skills </a> - Food Service Professionals strategy:
 			</label>
 			<div class="checkbox">
@@ -402,7 +387,7 @@
 			</div>
 		</div>
 
-		<div class="form-group hidden">
+		<div class="form-group hidden" id="buy">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-affordability/strategies/" target="_blank"> Food Affordability</a> - Buying Food strategy:
 			</label>
 			<div class="checkbox">
@@ -422,7 +407,7 @@
 			</div>
 		</div>
 
-		<div class="form-group hidden">
+		<div class="form-group hidden" id="sell">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-affordability/strategies/" target="_blank"> Food Affordability</a> - Selling Food strategy:
 			</label>
 			<div class="checkbox">
@@ -452,7 +437,7 @@
 			</div>
 		</div>
 
-		<div class="form-group hidden">
+		<div class="form-group hidden" id="places">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-availability/strategies/" target="_blank"> Food Availability</a> - Places and Options strategy:
 			</label>
 			<div class="checkbox">
@@ -557,7 +542,7 @@
 			</div>
 		</div>
 
-		<div class="form-group hidden">
+		<div class="form-group hidden" id="climate">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-availability/strategies/" target="_blank"> Food Availability</a> - Climate and Environment strategy:
 			</label>
 			<div class="checkbox">
@@ -572,7 +557,7 @@
 			</div>
 		</div>
 
-		<div class="form-group hidden">
+		<div class="form-group hidden" id="accessibility">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-accessibility/strategies/" target="_blank"> Food Accessibility</a> - Transportation strategy:
 			</label>
 			<div class="checkbox">
@@ -617,7 +602,7 @@
 			</div>
 		</div>
 
-		<div class="form-group hidden">
+		<div class="form-group hidden" id="agriculture">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-infrastructure/strategies/" target="_blank"> Food Infrastructure</a> - Agriculture and Food Research, Technologies, and Practices strategy:
 			</label>
 			<div class="checkbox">
@@ -652,7 +637,7 @@
 			</div>
 		</div>
 
-		<div class="form-group hidden">
+		<div class="form-group hidden" id="physical">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-infrastructure/strategies/" target="_blank"> Food Infrastructure</a> - Physical and Financial Infrastructure strategy associated with this project:
 			</label>
 			<div class="checkbox">
@@ -682,7 +667,7 @@
 			</div>
 		</div>
 
-		<div class="form-group hidden">
+		<div class="form-group hidden" id="local">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-infrastructure/strategies/" target="_blank"> Food Infrastructure</a> - Local Markets strategy associated with this project:
 			</label>
 			<div class="checkbox">
@@ -697,7 +682,7 @@
 			</div>
 		</div>
 
-		<div class="form-group hidden">
+		<div class="form-group hidden" id="farmland">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-infrastructure/strategies/" target="_blank"> Food Infrastructure</a> - Farmland Access and Preservation strategy associated with this project:
 			</label>
 			<div class="checkbox">
@@ -712,7 +697,7 @@
 			</div>
 		</div>
 
-		<div class="form-group hidden">
+		<div class="form-group hidden" id="farmer">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-infrastructure/strategies/" target="_blank"> Food Infrastructure</a> - Farmer Training and Resources strategy associated with this project:
 			</label>
 			<div class="checkbox">
@@ -737,7 +722,7 @@
 			</div>
 		</div>
 
-		<div class="form-group hidden">
+		<div class="form-group hidden" id="labor">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-infrastructure/strategies/" target="_blank"> Food Infrastructure</a> -  Labor and Pay strategy associated with this project:
 			</label>
 			<div class="checkbox">
@@ -772,7 +757,7 @@
 			</div>
 		</div>
 
-		<div class="form-group hidden">
+		<div class="form-group hidden" id="healthy">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-infrastructure/strategies/" target="_blank"> Food Infrastructure</a> - Healthy Food and Agriculture  Policy strategy associated with this project:
 			</label>
 			<div class="checkbox">
@@ -797,7 +782,7 @@
 			</div>
 		</div>
 
-		<div class="form-group hidden">
+		<div class="form-group hidden" id="food">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-infrastructure/strategies/" target="_blank"> Food Infrastructure</a> - Food Labeling, Regulations, and Marketing strategy associated with this project:
 			</label>
 			<div class="checkbox">
@@ -832,7 +817,7 @@
 			</div>
 		</div>
 
-		<div class="form-group hidden">
+		<div class="form-group hidden" id="influence">
 			<label class="control-label">Please choose a <a href="http://mnfoodcharter.com/the-charter/food-infrastructure/strategies/" target="_blank"> Food Infrastructure</a> - Influencing and Decision Making strategy associated with this project:
 			</label>
 			<div class="checkbox">
@@ -856,7 +841,7 @@
 				</label>
 			</div>
 		</div>
-		<button class="btn switch-list">Submit</button> <!-- If button is last in form, it will be a submit button -->
+		<button class="btn switch-list">Create Project Point</button> <!-- If button is last in form, it will be a submit button -->
 	</div>
 	</form>
 
@@ -864,19 +849,39 @@
 	<script>
 
 		$(document).ready(function() {
-			var connected = $('#surveyForm2 input:radio[name=connected]');
-
-			var yes = $('#surveyForm2 text[name="connectedresult"]').parent();
-
-			connected.change(function() {
-			var value=this.value;
-			all.addClass('hidden');
-
-			if (value == 'Yes'){
-				yes.removeClass('hidden');
-				
+			$("input[name=connected]").on("change", function() { //name of originating question
+				if($(this).val() == "yes") { //put in value that if checked, will cause script to run
+					$("input[name=connectedresult]").closest(".form-group").removeClass("hidden"); //name of input to be shown
+				}																	//class name = .form-group
+				else {
+					$(".connectedresult").addClass("hidden"); //if person changes mind this will remove the above.
+				}
 			});
 
+			$("input[name=categories]").on("change",function() {
+				var $category = '#'+$(this).val();
+				$($category).toggleClass('hidden');	
+			});
+
+			$("input[name=skillssubcategory]").on("change",function() {
+				var $skillsub = '#'+$(this).val();
+				$($skillsub).toggleClass('hidden');	
+			});
+
+			$("input[name=affordabilitysubcategory]").on("change",function() {
+				var $skillsub = '#'+$(this).val();
+				$($skillsub).toggleClass('hidden');	
+			});
+
+			$("input[name=availabilitysubcategory]").on("change",function() {
+				var $skillsub = '#'+$(this).val();
+				$($skillsub).toggleClass('hidden');	
+			});
+
+			$("input[name=infrastructuresubcategory]").on("change",function() {
+				var $skillsub = '#'+$(this).val();
+				$($skillsub).toggleClass('hidden');	
+			});
 		});
 
 	</script>

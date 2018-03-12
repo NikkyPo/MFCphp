@@ -1,7 +1,12 @@
+<?php 
+	$header="Minnesota Food Charter";
+
+?>
+
 <!DOCTYPE html>
 	<html>
 	<head>
-		<title>Minnesota Food Charter</title>
+		<title><?php echo $header; ?></title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		
@@ -44,15 +49,14 @@
     		<p>Don't have an account? <button class="btn switch-list">Register here</button><br>
     		</p>
     	</div>
-		<div>
-			<label for="username">Username</label>
-			<input id="username" type="text" placeholder=" username" name="username" required><br><br>
-			<label for="passwords">Password</label>
-	        <input pattern=".{5,10}" required title="5 to 10 characters" id="passwords" type="password" placeholder=" password" name="password" required>
-        </div><br>
-        	<button class="btn switch-list">Sign In</button>
-        	        </div>
-        	        <br><br>
+
+    	<form method="POST" action="process.php">
+			Username: <input id="username" type="text" placeholder=" username" name="username" required><br><br>
+	        Password: <input pattern=".{5,10}" required title="5 to 10 characters" id="passwords" type="password" placeholder=" password" name="password" required>
+	        <br><br>
+        	<input type="submit" value="Sign In" class="btn switch-list">
+
+        <br><br>
         <p>Take a survey to add your project point and information to the map</p>
 
         <button class="btn switch-list "><a href="survey.html" style="color: black; text-decoration: none">Survey</a></button>
