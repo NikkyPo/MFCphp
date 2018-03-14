@@ -25,14 +25,14 @@
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
 		        </button>
-		        <a href="index.html" class="navbar-brand"><img style="max-width:200px;" alt="Brand" src="img/mfclogo.png"></a>
+		        <a href="index.php" class="navbar-brand"><img style="max-width:200px;" alt="Brand" src="img/mfclogo.png"></a>
 		    </div>
 		    <div class="collapse navbar-collapse" id="mainNavBar">
 		         <ul class="nav navbar-nav navbar-right">
-		         	<li><a href="index.html">Map</a></li>
-		            <li><a href="about.html">About</a></li>
-		            <li><a href="account.html">Your Account</a></li>
-		            <li><a href="feedback.html">Feedback</a></li>
+		         	<li><a href="../index.php">Map</a></li>
+		            <li><a href="../about.php">About</a></li>
+		            <li><a href="../account.php">Your Account</a></li>
+		            <li><a href="../feedback.php">Feedback</a></li>
 		        </ul>  
 		     </div>
 		</nav>

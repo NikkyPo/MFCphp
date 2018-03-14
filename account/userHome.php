@@ -1,3 +1,10 @@
+<?php
+	foreach ($_POST as $key=>$val) {
+		$sql .="{$key} = '{$val}', ";
+	}
+
+?>
+
 <!DOCTYPE html>
 	<html>
 	<head>
@@ -14,7 +21,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		
 	</head>
-	<body id="about">
+	<body class="mapfont">
 		<nav class="navbar navbar-default navbar-fixed-top">
 		     <div class="navbar-header">
 		        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
@@ -22,36 +29,23 @@
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
 		        </button>
-		        <a href="index.html" class="navbar-brand"><img style="max-width:200px;" alt="Brand" src="img/mfclogo.png"></a>
+		        <a href="index.php" class="navbar-brand"><img style="max-width:200px;" alt="Brand" src="img/mfclogo.png"></a>
 		    </div>
 		    <div class="collapse navbar-collapse" id="mainNavBar">
 		         <ul class="nav navbar-nav navbar-right">
-		            <li><a href="index.html">Map</a></li>
-		            <li><a href="about.html">About</a></li>
-		            <li><a href="account.html">Your Account</a></li>
-		            <li><a href="feedback.html">Feedback</a></li>
+		            <li><a href="../index.php">Map</a></li>
+		            <li><a href="../about.php">About</a></li>
+		            <li><a href="../account.php">Your Account</a></li>
+		            <li><a href="../feedback.php">Feedback</a></li>
 		        </ul>  
 		     </div>
 		</nav>
-		<form class="mapfont">
-			<br>
-			<br>
-			<h4>Welcome to the Minnesota Food Charter Strategy Implementation Map</h4><br>
-			<strong>Objective:</strong>
-				<p>Develop a statewide mapping system that can build power by helping individuals and organizations see their work as connected to a broader movement: The Minnesota Food Charter.
-				</p>
-			<strong>Goals:</strong>
-				<ul>
-					<li>Create an online space where people can connect with information, resources, and other people doing similar work in order to support learning, alignment, and sharing that advances the Minnesota Food Charter strategies.</li>
-				</ul>
-				<ul>
-					<li>Promote the exchange of practical information and resources, as well as the cultivation of individual and shared narratives.</li>
-				</ul>
-				<ul>
-					<li>Identify opportunities for collaboration and gaps in support.</li>
-				</ul><br>
-			<p>Visit the <a href="http://mnfoodcharter.com/the-charter/">Minnesota Food Charter </a> website to learn more.</p>
-		</form>
+		<br>
+		<br>
+		<h3>Welcome to your account <?php echo $_POST['username']; ?> </h3>
+
+        <p>Take a survey to add your project point and information to the map</p>
+        <button class="btn switch-list "><a href="survey.php" style="color: black; text-decoration: none">Survey</a></button>
 
 	<script>
 
