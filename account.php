@@ -25,11 +25,11 @@
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
 		        </button>
-		        <a href="index.php" class="navbar-brand"><img style="max-width:200px;" alt="Brand" src="img/mfclogo.png"></a>
+		        <a href="index.html" class="navbar-brand"><img style="max-width:200px;" alt="Brand" src="img/mfclogo.png"></a>
 		    </div>
 		    <div class="collapse navbar-collapse" id="mainNavBar">
 		         <ul class="nav navbar-nav navbar-right">
-		         	<li><a href="index.php">Map</a></li>
+		         	<li><a href="index.html">Map</a></li>
 		            <li><a href="about.php">About</a></li>
 		            <li><a href="account.php">Your Account</a></li>
 		            <li><a href="feedback.php">Feedback</a></li>
@@ -54,20 +54,39 @@
     </form>
 
 
-<form id="form1" class="hidden">
+<form id="createAccount" class="hidden" method="POST" action="account/userHome.php">
 	<h3><strong>Create Account</strong></h3><br>
-  First Name  <input type="text" name="firstName">
-    <br><br>
-  Last Name  <input type="text" name="lastName">
-    <br><br>
-
-  <button class="btn switch-list" type="button" id="submit">Submit</button>
+	<div class="form-group">
+		<label for="firstName" class="control-label">
+			First Name  <input class="form-control" type="text" name="firstName" id="firstName" required placeholder="First Name">
+		</label>
+	</div>
+	<div class="form-group">
+		<label for="lastname" class="control-label">
+			Last Name  <input class="form-control" type="text" name="lastname" id="lastname" required placeholder="Last Name">
+		</label>
+	</div>
+	<div class="form-group">
+		<label for="email" class="control-label">
+		Email  <input class="form-control" type="text" maxlength="100" placeholder="Email" id="email" name="email" required>
+		</label>
+	</div>
+		<div class="form-group">
+			<label for="newusername" class="control-label">Username
+			<input class="form-control" id="newusername" type="text" placeholder="Username" name="newusername" maxlength="20" required>
+		</label><br><br>
+			<label for="newpassword" class="control-label">Password
+	        <input class="form-control" pattern=".{5,20}" required title="5 to 20 characters" id="newpassword" type="password" placeholder="Password" name="newpassword" maxlength="20" required>
+	    </label>
+        </div>
+        <br>
+  <button class="btn switch-list" type="button" id="submit">Finish</button>
   </form>
 
 <script>
 	$(document).ready(function(){
 	    $("#formButton").click(function(){
-	        $("#form1").toggleClass("hidden");
+	        $("#createAccount").toggleClass("hidden");
 	    });
 	});
 
