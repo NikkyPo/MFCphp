@@ -25,26 +25,16 @@ html, body, #mapdiv {
 	margin-top: 17px;
 }
 
-#feedback form {
+#formstyle {
 	margin: 5%;
-	margin-top: 22px;
-}
-#account form {
-	margin: 5%;
-	margin-top: 52px;
-}
-#about form {
-	margin: 5%;
-	margin-top: 22px;
-}
-#profile form {
-	margin: 5%
 	margin-top: 22px;
 }
 
 .mapfont {
 	font-family: 'Merriweather Sans', sans-serif;
 	height: auto;
+	margin: 5%
+	margin-top: 22px;
 }
 .btn:hover {
 	background-color: #ffa12d;
