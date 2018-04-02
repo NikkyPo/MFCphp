@@ -15,13 +15,12 @@
 	    </div>
 	    <br>
 	    	<button class="btn switch-list">Sign In</button>
-	    <br>
-	    <br>
+
 	</form>
 </div>
 
 <div id="formstyle">
-    <p style="margin:5%;">Not registered yet?
+    <p>Not registered yet?
     <button class="btn switch-list" type="button" id="formButton">Create Account</button></p>
 
 	<form id="createAccount" class="hidden" method="POST" action="account/userHome.php">
