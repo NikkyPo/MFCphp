@@ -1,11 +1,13 @@
 <?php
 	include('includes/header.php');
+
+	$db = pg_connect('host=localhost port=5432 dbname=postgres user=postgres password=postgres');
+	$query = "INSERT INTO feedback_form VALUES ('$_POST[rating]', '$_POST[connection]', '$_POST[use]', '$_POST[like]', '$_POST[dislike]', '$_POST[useful]')";
+	$result = pg_query($query);
+
 ?>
 
-<br>
-<br>
 <div id="formstyle">
-
 	<br>
 
 <?php
@@ -30,33 +32,9 @@
 
 			die(); // if true, kill scripts
 		}
-		//add the recipient email to a variable
-		$to = "sparky4real@gmail.com";
-		$subject = "You were sent feedback";
-
-		//actual message
-		$message = "Connection: $connection\r\n";
-		$message .="Rating: $rating\r\n";
-		$message .="Use: $use\r\n";
-		$message .="Liked it?: $like\r\n";
-		$message .="Didn't like: $dislike\r\n";
-		$message .="Useful?: $useful\r\n";	
-
-		$message = wordwrap($message, 72);
-
-		//set mail headers - required
-
-		$headers = "MIME-Version: 1.0\r\n";
-		$headers .="Content-type: text/plain; charset=iso-8859-1\r\n";
-		$headers .="From: FoodCharter@gmail.com\r\n";
-		$headers .="X-MSMail-Priority: High\r\n\r\n";
-
-		//send email
-		mail($to, $subject, $message, $headers);
-
 ?>
 <h3><b>Thanks for your feedback<b></h3>
-<p><a href="foodcharter_demo/index.php" class="button block">&laquo; Go to Map</a></p>
+<p><a href="index.php" class="button block">&laquo; Go to Map</a></p>
 
 <!-- here need to include some html to show success, so need to wrap sending mail with new php. -->
 <?php } else { ?>
@@ -91,15 +69,13 @@
 	<div>
 		<h5>3. How did you use the map today?</h5>
 		<label for="points">Added my work to the map using the survey</label>
-	    <input id="points" type="checkbox" name="use" value="1"><br>
+	    <input type="checkbox" name="checkbox[]" value="1"><br>
 	    <label for="view">Viewed datapoints on the map.</label>
-	    <input id="view" type="checkbox" name="use" value="2"><br>
+	    <input type="checkbox" name="checkbox[]" value="2"><br>
 	    <label for="find">Zoomed in and out on the map</label>
-	    <input id="find" type="checkbox" name="use" value="3"><br>
+	    <input type="checkbox" name="checkbox[]" value="3"><br>
 	    <label for="look">Looked at the About section</label>
-	    <input id="look" type="checkbox" name="use" value="4"><br>
-	    <label for="other">Other:</label>
-	    <input id="other" type="text" name="use">
+	    <input type="checkbox" name="checkbox[]" value="4"><br>
 	</div>
 	<br>
 
