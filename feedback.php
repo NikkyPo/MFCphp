@@ -2,7 +2,7 @@
 	include('includes/header.php');
 
 	$db = pg_connect('host=localhost port=5432 dbname=postgres user=postgres password=postgres');
-	$query = "INSERT INTO feedback_form VALUES ('$_POST[rating]', '$_POST[connection]', '$_POST[use]', '$_POST[like]', '$_POST[dislike]', '$_POST[useful]')";
+	$query = "INSERT INTO feedback_form VALUES ('$_POST[rating]', '$_POST[connection]', '$_POST[use1]', '$_POST[use2]', '$_POST[use3]','$_POST[use4]', '$_POST[like]', '$_POST[dislike]', '$_POST[useful]')";
 	$result = pg_query($query);
 
 ?>
@@ -69,13 +69,13 @@
 	<div>
 		<h5>3. How did you use the map today?</h5>
 		<label for="points">Added my work to the map using the survey</label>
-	    <input type="checkbox" name="checkbox[]" value="1"><br>
+	    <input type="checkbox" name="use1" value="1"><br>
 	    <label for="view">Viewed datapoints on the map.</label>
-	    <input type="checkbox" name="checkbox[]" value="2"><br>
+	    <input type="checkbox" name="use2" value="2"><br>
 	    <label for="find">Zoomed in and out on the map</label>
-	    <input type="checkbox" name="checkbox[]" value="3"><br>
+	    <input type="checkbox" name="use3" value="3"><br>
 	    <label for="look">Looked at the About section</label>
-	    <input type="checkbox" name="checkbox[]" value="4"><br>
+	    <input type="checkbox" name="use4" value="4"><br>
 	</div>
 	<br>
 
@@ -101,3 +101,4 @@
 <?php } ?>
 <hr>
 </div>
+

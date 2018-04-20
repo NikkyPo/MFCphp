@@ -1,10 +1,16 @@
 <?php
 	include('includes/header.php');
+
+	$db = pg_connect('host=localhost port=5432 dbname=postgres user=postgres password=postgres');
+	$query = "INSERT INTO survey VALUES ('$_POST[project_name]', '$_POST[geopoint]', '$_POST[geodescription]', '$_POST[contact]', '$_POST[organization]', '$_POST[email]','$_POST[description]', '$_POST[learning]', '$_POST[resources]', '$_POST[website]', '$_POST[connected]', '$_POST[connectedresult]', '$_POST[categories]', '$_POST[skillssubcategory]', '$_POST[affordabilitysubcategory]', '$_POST[availabilitysubcategory]', '$_POST[infrastructuresubcategory]', '$_POST[skillschildrenstrategy]', '$_POST[skillsadultstrategy]', '$_POST[skillsprofessionalstrategy]', '$_POST[affordabilitybuystrategy]', '$_POST[affordabilitysellstrategy]', '$_POST[availabilityplacestrategy]', '$_POST[availabilityclimatestrategy]', '$_POST[accessibilitytransportationstrategy]', '$_POST[infrastructureagriculturestrategy]', '$_POST[infrastructurephysicalstrategy]', '$_POST[infrastructurelocalstrategy]', '$_POST[infrastructurefarmlandstrategy]', '$_POST[infrastructurefarmerstrategy]', '$_POST[infrastructurelaborstrategy]', '$_POST[infrastructurehealthystrategy]', '$_POST[infrastructurefoodstrategy]', '$_POST[infrastructureinfluencestrategy]')";
+	$result = pg_query($query);
+
 ?>
 
 <div id="formstyle">
-<form class="surveyForm1">
-	<div id="part1">
+	<br>
+
+<form method="post" action="" class="surveyForm1">
 	<br><h3>The Minnesota Food Charter Survey</h3><br>
 	<h4><p>This survey is intended to gather information that can help individuals and organizations connect with information, resources, and others doing simliar work that advances the Minnesota Food Charter strategies.</p></h4><br>
 	
@@ -67,12 +73,7 @@
 			<textarea class="form-control" type="url" maxlength="300" id="website" name="website" rows="4"></textarea>
 		</label>
 	</div>
-</div>
-</form>
 
-
-<form class="surveyForm2">
-	<div id="part2">
 	<H3>Categories, Subcategories and Strategies</H3>
 	<br>
 	<div class="form-group">
@@ -807,8 +808,7 @@
 			</label>
 		</div>
 	</div>
-	<button class="btn switch-list">Create Project Point</button> <!-- If button is last in form, it will be a submit button -->
-</div>
+	<input type="submit" name="contact_submit" value="Submit Survey" class="btn switch-list"> <!-- If button is last in form, it will be a submit button -->
 </form>
 </div>
 

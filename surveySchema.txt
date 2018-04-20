@@ -1,38 +1,38 @@
 CREATE TABLE survey (
 
-project_name
-geopoint
-geodescription
-contact
-organization
-email
-description
-learning
-resources
-website
-connected
-connectedresult
-categories
-skills_subcategory
-affordability_subcategory
-availability_subcategory
-infrastructure_subcategory
-skills_children_strategy
-skills_adult_strategy
-skills_professional_strategy
-affordability_buy_strategy
-affordability_sell_strategy
-availability_place_strategy
-availability_climate_strategy
-accessibility_transportation_strategy
-infrastructure_agriculture_strategy
-infastructure_physical_strategy
-infrastructure_local_strategy
-infrastructure_farmland_strategy
-infrastructure_farmer_strategy
-infrastructure_labor_strategy
-infrastructure_healthy_strategy
-infrastructure_food_strategy
-infrastructure_influence_strategy
+project_name varchar(255),
+geopoint varchar(255),
+geodescription varchar(255),
+contact varchar(255),
+organization varchar(255),
+email varchar(255),
+description varchar(255),
+learning varchar(255),
+resources varchar(255),
+website varchar(255),
+connected varchar(255),
+connectedresult varchar(255),
+categories varchar(255),
+skillssubcategory varchar(255),
+affordabilitysubcategory varchar(255),
+availabilitysubcategory varchar(255),
+infrastructuresubcategory varchar(255),
+skillschildrenstrategy varchar(255),
+skillsadultstrategy varchar(255),
+skillsprofessionalstrategy varchar(255),
+affordabilitybuystrategy varchar(255),
+affordabilitysellstrategy varchar(255),
+availabilityplacestrategy varchar(255),
+availabilityclimatestrategy varchar(255),
+accessibilitytransportationstrategy varchar(255),
+infrastructureagriculturestrategy varchar(255),
+infastructurephysicalstrategy varchar(255),
+infrastructurelocalstrategy varchar(255),
+infrastructurefarmlandstrategy varchar(255),
+infrastructurefarmerstrategy varchar(255),
+infrastructurelaborstrategy varchar(255),
+infrastructurehealthystrategy varchar(255),
+infrastructurefoodstrategy varchar(255),
+infrastructureinfluencestrategy varchar(255)
 
-)
+);
