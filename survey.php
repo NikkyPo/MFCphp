@@ -181,6 +181,9 @@
 		</label>
 	</div>
 
+	<div id="map"></div><br>
+
+
 	<div class="form-group">
 		<label for="geodescription" class="control-label">Geographic description
 			<textarea class="form-control" maxlength="300" id="geodescription" name="geodescription" rows="4" required></textarea>
@@ -969,7 +972,6 @@
 
 <hr>
 <script>
-
 	$(document).ready(function() {
 		$("input[name=connected]").on("change", function() { //name of originating question
 			if($(this).val() == "yes") { //put in value that if checked, will cause script to run
@@ -1004,6 +1006,66 @@
 			var $skillsub = '#'+$(this).val();
 			$($skillsub).toggleClass('hidden');	
 		});
+
+
+
 	});
+
+</script>
+<style>
+	#map {
+		height: 500px;
+		width: 500px;
+	}
+</style>
+<script>
+
+// create a map in the "map" div, set the view to a given place and zoom
+var map = L.map('map').setView([46.2, -94.6], 6);
+
+// add an OpenStreetMap tile layer
+L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+// Initialise the FeatureGroup to store editable layers
+var drawnItems = new L.FeatureGroup();
+map.addLayer(drawnItems);
+
+// Initialise the draw control and pass it the FeatureGroup of editable layers
+var drawControl = new L.Control.Draw({
+  edit: {
+    featureGroup: drawnItems
+  }
+});
+map.addControl(drawControl);
+
+
+map.on('draw:created', function(e) {
+  var layer = e.layer,
+  		popupContent = layer.toGeoJSON ?
+      	JSON.stringify(layer.toGeoJSON()) : "(no data)";
+
+  // Do whatever else you need to. (save to db, add to map etc)
+  drawnItems.addLayer(layer);
+  
+  layer.bindPopup(popupContent).openPopup();
+});	
+
+	var mnCounty = L.esri.featureLayer({
+		url:'https://services.arcgis.com/8df8p0NlLFEShl0r/ArcGIS/rest/services/MN_Counties_NetworkCount/FeatureServer/0',
+		simplifyFactor: 0.5,
+		precision: 5,
+		style: function(feature) {
+			return {
+				fillColor: "#FFFFFF",
+				fillOpacity: 0,
+				opacity: 1,
+				color: "grey",
+				weight: .5
+			};
+		}
+
+        }).addTo(map).bringToFront();
 
 </script>
