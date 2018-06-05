@@ -1,7 +1,8 @@
+<!-- Webpage about the Minnesota Food Charter -->
 <?php
 	include('includes/header.php');
 ?>
-<div id="formstyle"> 
+<div id="formstyle">
 	<form class="mapfont">
 		<br>
 		<br>

@@ -1,3 +1,4 @@
+<!-- Main map -->
 <?php
 	include('includes/header.php');
 ?>
