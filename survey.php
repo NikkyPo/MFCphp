@@ -1,19 +1,20 @@
+<!-- Survey that is sent to dataabase. -->
 <?php
 	include('includes/header.php');
 
-	$db = pg_connect('host=localhost port=5432 dbname=postgres user=postgres password=postgres');
+	$db = pg_connect('host=localhost port=5432 dbname=foodcharter user=postgres password=postgres');
 	$query = "INSERT INTO survey VALUES (
-	'$_POST[project_name]', 
-	'$_POST[geopoint]', 
-	'$_POST[geodescription]', 
-	'$_POST[contact]', 
-	'$_POST[organization]', 
+	'$_POST[project_name]',
+	'$_POST[geopoint]',
+	'$_POST[geodescription]',
+	'$_POST[contact]',
+	'$_POST[organization]',
 	'$_POST[email]',
-	'$_POST[description]', 
-	'$_POST[learning]', 
-	'$_POST[resources]', 
-	'$_POST[website]', 
-	'$_POST[connected]', 
+	'$_POST[description]',
+	'$_POST[learning]',
+	'$_POST[resources]',
+	'$_POST[website]',
+	'$_POST[connected]',
 	'$_POST[connectedresult]',
 
 	'$_POST[categories_skills]',
@@ -24,15 +25,15 @@
 
 	'$_POST[skillssubcategory_children]',
 	'$_POST[skillssubcategory_adults]',
-	'$_POST[skillssubcategory_professionals]', 
+	'$_POST[skillssubcategory_professionals]',
 
-	'$_POST[affordabilitysubcategory_buy]', 
+	'$_POST[affordabilitysubcategory_buy]',
 	'$_POST[affordabilitysubcategory_sell]',
 
-	'$_POST[availabilitysubcategory_places]', 
+	'$_POST[availabilitysubcategory_places]',
 	'$_POST[availabilitysubcategory_climate]',
 
-	'$_POST[infrastructuresubcategory_agriculture]', 
+	'$_POST[infrastructuresubcategory_agriculture]',
 	'$_POST[infrastructuresubcategory_physical]',
 	'$_POST[infrastructuresubcategory_local]',
 	'$_POST[infrastructuresubcategory_farmland]',
@@ -42,20 +43,20 @@
 	'$_POST[infrastructuresubcategory_food]',
 	'$_POST[infrastructuresubcategory_influence]',
 
-	'$_POST[skillschildrenstrategy1]', 
+	'$_POST[skillschildrenstrategy1]',
 	'$_POST[skillschildrenstrategy2]',
-	'$_POST[skillschildrenstrategy3]',  
-	'$_POST[skillschildrenstrategy4]', 
-	'$_POST[skillschildrenstrategy5]', 
+	'$_POST[skillschildrenstrategy3]',
+	'$_POST[skillschildrenstrategy4]',
+	'$_POST[skillschildrenstrategy5]',
 	'$_POST[skillschildrenstrategy6]',
-	'$_POST[skillschildrenstrategy7]', 
-	'$_POST[skillschildrenstrategy8]', 
-	'$_POST[skillschildrenstrategy9]', 
-	'$_POST[skillschildrenstrategy10]', 
-	'$_POST[skillschildrenstrategy11]', 
-	'$_POST[skillschildrenstrategy12]', 
+	'$_POST[skillschildrenstrategy7]',
+	'$_POST[skillschildrenstrategy8]',
+	'$_POST[skillschildrenstrategy9]',
+	'$_POST[skillschildrenstrategy10]',
+	'$_POST[skillschildrenstrategy11]',
+	'$_POST[skillschildrenstrategy12]',
 
-	'$_POST[skillsadultstrategy13]', 
+	'$_POST[skillsadultstrategy13]',
 	'$_POST[skillsadultstrategy14]',
 	'$_POST[skillsadultstrategy15]',
 	'$_POST[skillsadultstrategy16]',
@@ -65,11 +66,11 @@
 	'$_POST[skillsprofessionalstrategy19]',
 	'$_POST[skillsprofessionalstrategy20]',
 	'$_POST[skillsprofessionalstrategy21]',
-	'$_POST[skillsprofessionalstrategy22]', 
+	'$_POST[skillsprofessionalstrategy22]',
 
 	'$_POST[affordabilitybuystrategy23]',
 	'$_POST[affordabilitybuystrategy24]',
-	'$_POST[affordabilitybuystrategy25]', 
+	'$_POST[affordabilitybuystrategy25]',
 
 	'$_POST[affordabilitysellstrategy26]',
 	'$_POST[affordabilitysellstrategy27]',
@@ -77,7 +78,7 @@
 	'$_POST[affordabilitysellstrategy29]',
 	'$_POST[affordabilitysellstrategy30]',
 
-	'$_POST[availabilityplacestrategy31]', 
+	'$_POST[availabilityplacestrategy31]',
 	'$_POST[availabilityplacestrategy32]',
 	'$_POST[availabilityplacestrategy33]',
 	'$_POST[availabilityplacestrategy34]',
@@ -99,7 +100,7 @@
 	'$_POST[availabilityplacestrategy50]',
 
 	'$_POST[availabilityclimatestrategy51]',
-	'$_POST[availabilityclimatestrategy52]', 
+	'$_POST[availabilityclimatestrategy52]',
 
 	'$_POST[accessibilitytransportationstrategy53]',
 	'$_POST[accessibilitytransportationstrategy54]',
@@ -115,21 +116,21 @@
 	'$_POST[infrastructureagriculturestrategy63]',
 	'$_POST[infrastructureagriculturestrategy64]',
 	'$_POST[infrastructureagriculturestrategy65]',
-	'$_POST[infrastructureagriculturestrategy66]', 
+	'$_POST[infrastructureagriculturestrategy66]',
 
-	'$_POST[infrastructurephysicalstrategy67]', 
-	'$_POST[infrastructurephysicalstrategy68]', 
-	'$_POST[infrastructurephysicalstrategy69]', 
-	'$_POST[infrastructurephysicalstrategy70]', 
-	'$_POST[infrastructurephysicalstrategy71]', 
+	'$_POST[infrastructurephysicalstrategy67]',
+	'$_POST[infrastructurephysicalstrategy68]',
+	'$_POST[infrastructurephysicalstrategy69]',
+	'$_POST[infrastructurephysicalstrategy70]',
+	'$_POST[infrastructurephysicalstrategy71]',
 
 	'$_POST[infrastructurelocalstrategy72]',
 	'$_POST[infrastructurelocalstrategy73]',
 
-	'$_POST[infrastructurefarmlandstrategy74]', 
+	'$_POST[infrastructurefarmlandstrategy74]',
 	'$_POST[infrastructurefarmlandstrategy75]',
 
-	'$_POST[infrastructurefarmerstrategy76]', 
+	'$_POST[infrastructurefarmerstrategy76]',
 	'$_POST[infrastructurefarmerstrategy77]',
 	'$_POST[infrastructurefarmerstrategy78]',
 	'$_POST[infrastructurefarmerstrategy79]',
@@ -159,7 +160,6 @@
 	'$_POST[infrastructureinfluencestrategy99]')";
 	$result = pg_query($query);
 
-
 ?>
 
 <div id="formstyle">
@@ -168,7 +168,7 @@
 <form method="post" action="" class="surveyForm1">
 	<br><h3>The Minnesota Food Charter Survey</h3><br>
 	<h4><p>This survey is intended to gather information that can help individuals and organizations connect with information, resources, and others doing simliar work that advances the Minnesota Food Charter strategies.</p></h4><br>
-	
+
 	<div class="form-group">
 		<label for="project_name" class="control-label">What is the title of your project?
 			<input class="form-control" type="text" maxlength="100" placeholder="" id="project_name" name="project_name" required>
@@ -176,7 +176,7 @@
 	</div>
 
 	<div class="form-group">
-		<label for="geopoint" class="control-label">Where is your project located? 
+		<label for="geopoint" class="control-label">Where is your project located?
 			<input class="form-control" type="text" maxlength="100" placeholder="" id="geopoint" name="geopoint" required>
 		</label>
 	</div>
@@ -191,22 +191,22 @@
 	</div>
 
 	<div class="form-group">
-		<label for="contact" class="control-label">Please provide the name of the primary contact for the project. 
+		<label for="contact" class="control-label">Please provide the name of the primary contact for the project.
 			<input class="form-control" type="text" maxlength="100" placeholder="" id="contact" name="contact" required>
 		</label>
-	</div>	
+	</div>
 
 	<div class="form-group">
-		<label for="organization" class="control-label">Organization for primary contact. 
+		<label for="organization" class="control-label">Organization for primary contact.
 			<input class="form-control" type="text" maxlength="100" placeholder="" id="organization" name="organization" required>
 		</label>
-	</div>	
+	</div>
 
 	<div class="form-group">
 		<label for="email" class="control-label">Email address for primary contact.
 			<input class="form-control" type="text" maxlength="100" placeholder="" id="email" name="email" required>
 		</label>
-	</div>		
+	</div>
 
 	<div class="form-group">
 		<label for="description" class="control-label">Brief description of the project - what are you trying to accomplish and how are you going about it?<br>
@@ -326,7 +326,7 @@
 		<label class="control-label">Please choose a <a href ="http://mnfoodcharter.com/the-charter/food-availability/" target="_blank"> Food Availability</a> subcategory associated with the project:
 		</label>
 		<div class="checkbox">
-			<label> 
+			<label>
 				<input class="availabilitysubcategory" type="checkbox" name="availabilitysubcategory_places" value="places">Places and Options
 			</label>
 		</div>
@@ -984,30 +984,28 @@
 
 		$(".categories").on("change",function() {
 			var $category = '#'+$(this).val();
-			$($category).toggleClass('hidden');	
+			$($category).toggleClass('hidden');
 		});
 
 		$("input[class=skillssubcategory]").on("change",function() {
 			var $skillsub = '#'+$(this).val();
-			$($skillsub).toggleClass('hidden');	
+			$($skillsub).toggleClass('hidden');
 		});
 
 		$("input[class=affordabilitysubcategory]").on("change",function() {
 			var $skillsub = '#'+$(this).val();
-			$($skillsub).toggleClass('hidden');	
+			$($skillsub).toggleClass('hidden');
 		});
 
 		$("input[class=availabilitysubcategory]").on("change",function() {
 			var $skillsub = '#'+$(this).val();
-			$($skillsub).toggleClass('hidden');	
+			$($skillsub).toggleClass('hidden');
 		});
 
 		$("input[class=infrastructuresubcategory]").on("change",function() {
 			var $skillsub = '#'+$(this).val();
-			$($skillsub).toggleClass('hidden');	
+			$($skillsub).toggleClass('hidden');
 		});
-
-
 
 	});
 
@@ -1024,7 +1022,7 @@
 var map = L.map('map').setView([46.2, -94.6], 6);
 
 // add an OpenStreetMap tile layer
-L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
@@ -1048,9 +1046,9 @@ map.on('draw:created', function(e) {
 
   // Do whatever else you need to. (save to db, add to map etc)
   drawnItems.addLayer(layer);
-  
+
   layer.bindPopup(popupContent).openPopup();
-});	
+});
 
 	var mnCounty = L.esri.featureLayer({
 		url:'https://services.arcgis.com/8df8p0NlLFEShl0r/ArcGIS/rest/services/MN_Counties_NetworkCount/FeatureServer/0',

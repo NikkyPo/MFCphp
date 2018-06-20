@@ -39,3 +39,6 @@ html, body, #mapdiv {
 .btn:hover {
 	background-color: #ffa12d;
 }
+.leaflet-control-layers-overlays {
+	font-family: 'Merriweather Sans', sans-serif;
+}

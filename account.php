@@ -1,10 +1,11 @@
+<!-- Login page. You can create an account from this page too. -->
 <?php
 	include('includes/header.php');
 ?>
 
 <div id="formstyle">
 	<form method="POST" action="userHome.php">
-		<h3><strong>Log In</strong></h3>  
+		<h3><strong>Log In</strong></h3>
 	 	<p>Once logged in you will be able to add and edit data in the Minnesota Food Charter map.</p>
 	 	<br>
 		<div>
