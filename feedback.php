@@ -34,15 +34,15 @@
 			die(); // if true, kill scripts
 		}
 ?>
-<h3><b>Thanks for your feedback<b></h3>
+<br><h4><b>Thanks for your feedback<b></h4>
 <p><a href="index.php" class="button block">&laquo; Go to Map</a></p>
 
 <?php } else { ?>
 
 <form method="post" action="" id="contact-form" class="mapfont">
-	<div>
-	<h3><b>Thank you for visiting! We are seeking rigorous feedback at the stage so that we can make improvements to this brand new tool.
-		<b></h3>
+	<div><br>
+	<h4>Thank you for visiting! We are seeking rigorous feedback at the stage so that we can make improvements to this brand new tool.
+		</h4><br>
 		<h5>1. Please describe your connection to food systems in Minnesota and / or the Minnesota Food Charter Network.
 			<br>
 			<input type="text" placeholder="" name="connection" required>

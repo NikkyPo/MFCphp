@@ -160,7 +160,6 @@
 	'$_POST[infrastructureinfluencestrategy99]')";
 	$result = pg_query($query);
 
-
 ?>
 
 <div id="formstyle">
@@ -1023,7 +1022,7 @@
 var map = L.map('map').setView([46.2, -94.6], 6);
 
 // add an OpenStreetMap tile layer
-L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
