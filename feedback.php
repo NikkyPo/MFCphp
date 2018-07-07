@@ -40,19 +40,18 @@
 <?php } else { ?>
 
 <form method="post" action="" id="contact-form" class="mapfont">
-	<div><br>
-	<h4>Thank you for visiting! We are seeking rigorous feedback at the stage so that we can make improvements to this brand new tool.
-		</h4><br>
-		<h5>1. Please describe your connection to food systems in Minnesota and / or the Minnesota Food Charter Network.
-			<br>
-			<input type="text" placeholder="" name="connection" required>
-		</h5>
+<br>
+	<h3><strong>Feedback</strong></h3>
+	<h4>Please complete the form to help us make improvements.</h4><br>
+		<div>
+		<label for="connection" class="control-label"><strong>Please describe your connection to food systems in Minnesota and / or the Minnesota Food Charter Network.</strong>
+			<input class="form-control" type="text" placeholder="" name="connection" required>
+		</label>
 	</div>
 	<br>
 
 	<div>
-		<h5>2. How would you rate your experience using the map today?
-		</h5>
+		<label class="control-label"><strong>How would you rate your experience using the map today?</strong><br>
 		<label for="poor">Poor</label>
 		<input id="poor" type="radio" name="rating" value="1">
 		<br>
@@ -64,10 +63,11 @@
 		<br>
 	    <label for="excellent">Excellent</label>
 	    <input id="excellent" type="radio" name="rating" value="4">
+		</label>
 	</div><br>
 
 	<div>
-		<h5>3. How did you use the map today?</h5>
+		<label class="control-label"><strong>How did you use the map today?</strong><br>
 		<label for="points">Added my work to the map using the survey</label>
 	    <input type="checkbox" name="use1" value="1"><br>
 	    <label for="view">Viewed datapoints on the map.</label>
@@ -76,23 +76,25 @@
 	    <input type="checkbox" name="use3" value="3"><br>
 	    <label for="look">Looked at the About section</label>
 	    <input type="checkbox" name="use4" value="4"><br>
+		</label>
 	</div>
 	<br>
-
 	<div>
-		<h5>4. What did you like about the map?<br>
-			<input type="text" placeholder="" name="likes" required>
-		</h5>
+		<label for="likes" class="control-label"><strong>What did you like about the map?</strong><br>
+			<input class="form-control" type="text" placeholder="" name="likes" required>
+		</label>
 	</div><br>
 
 	<div>
-		<h5>5. What did you NOT like about the map?<br><input type="text" placeholder="" name="dislike" required>
-		</h5>
+		<label class="control-label"><strong>What did you NOT like about the map?</strong><br>
+		<input class="form-control" type="text" placeholder="" name="dislike" required>
+		</label>
 	</div><br>
 
 	<div>
-		<h5>6. How could the map be more useful to you?<br><input type="text" placeholder="" name="useful" required>
-		</h5>
+		<label class="control-label"><strong>How could the map be more useful to you?</strong><br>
+		<input class="form-control" type="text" placeholder="" name="useful" required>
+	</label>
 	</div><br>
 
 	<input type="submit" name="contact_submit" value="Submit" class="btn switch-list">
@@ -101,3 +103,13 @@
 <?php } ?>
 <hr>
 </div>
+
+<style>
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+</style>
